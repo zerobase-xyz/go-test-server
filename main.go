@@ -17,7 +17,7 @@ func factorize(number int) {
 }
 
 func (s String) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	numbers := 214748363
+	numbers := 21473
 	factorize(numbers)
 	fmt.Fprint(w, s)
 }

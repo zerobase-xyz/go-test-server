@@ -5,8 +5,7 @@ ENV APP_PORT 8000
 
 RUN apk --no-cache add gettext
 
-COPY ./default.conf /etc/nginx/conf.d/default.conf.template
-COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx.conf /tmp/nginx.conf.template
 COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
